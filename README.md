@@ -6,17 +6,19 @@ PHP version 7.3 or higher is required, with the following extensions installed:
 
 ## Database Configuration
 
-App/Config/Database.php
+App/Config/Database.php >
 Line: 35 to 38
 
-Migrate Database 
-From project run this command
+Migrate Database >
+From project run this command >
 `php spark migrate`
+
+Or import database from SQL file located in /database/lab.sql
 
 ## Application Configuration
 
-Change Base URL 
-App/Config/App.php
+Change Base URL >
+App/Config/App.php >
 Line: 26
 
 ## Test API
