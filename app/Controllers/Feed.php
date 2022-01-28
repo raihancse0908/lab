@@ -16,7 +16,7 @@ class Feed extends ResourceController
      * @return mixed
      */
     use ResponseTrait;
-    public function index()
+    public function posts($page = 1, $page_size=10)
     {
         $key = getenv('TOKEN_SECRET');
         $header = $this->request->getServer('HTTP_AUTHORIZATION');
@@ -48,7 +48,11 @@ class Feed extends ResourceController
 
         $db = db_connect();
 
-        $query = $db->query("   SELECT a.post_content,CONCAT(u.first_name, ' ', u.last_name) as created_by FROM followers f
+        $offset = ($page-1) * $page_size;
+
+        $query = $db->query("   SELECT c.* FROM (
+
+                                SELECT a.post_content,CONCAT(u.first_name, ' ', u.last_name) as created_by FROM followers f
                                 INNER JOIN posts a ON (a.created_by = f.user_id) 
                                 INNER JOIN users u ON (a.created_by = u.id) 
                                 WHERE f.user_id !=0 AND f.followed_by= ".(empty($userdata)?0:$userdata['data']->id)."
@@ -58,7 +62,9 @@ class Feed extends ResourceController
                                 SELECT a.post_content,CONCAT(u.first_name, ' ', u.last_name) as created_by FROM followers f
                                 INNER JOIN posts a ON (a.page_id = f.page_id)  
                                 INNER JOIN users u ON (a.created_by = u.id) 
-                                WHERE f.page_id !=0 AND f.followed_by= ".(empty($userdata)?0:$userdata['data']->id)
+                                WHERE f.page_id !=0 AND f.followed_by= ".(empty($userdata)?0:$userdata['data']->id)."
+                                ) c
+                                LIMIT ".$offset.", ".$page_size
                             );
        
         return $this->respond(['posts' => $query->getResult()], 200);

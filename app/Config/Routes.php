@@ -35,8 +35,8 @@ $routes->setAutoRoute(true);
 $routes->post('register', 'Register::index');
 $routes->post('login', 'Login::index');
 
-$routes->get('feed', 'Feed::index', ['filter' => 'auth']);
-$routes->get('feed/(:num)/(:num)', 'Feed::index/$1/$2', ['filter' => 'auth']);
+$routes->get('feed', 'Feed::posts', ['filter' => 'auth']);
+$routes->get('feed/(:num)/(:num)', 'Feed::posts/$1/$2', ['filter' => 'auth']);
 
 $routes->get('page', 'Page::index', ['filter' => 'auth']);
 $routes->get('page/(:num)', 'Page::show/$1', ['filter' => 'auth']);
