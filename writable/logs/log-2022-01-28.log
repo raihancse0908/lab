@@ -1,0 +1,58 @@
+CRITICAL - 2022-01-28 23:12:47 --> Class 'Config\App\Filters\Cors' not found
+#0 E:\xampp\htdocs\lab\system\CodeIgniter.php(386): CodeIgniter\Filters\Filters->run('register', 'before')
+#1 E:\xampp\htdocs\lab\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 E:\xampp\htdocs\lab\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-28 23:22:29 --> Class 'Config\App\Filters\Auth' not found
+#0 E:\xampp\htdocs\lab\system\CodeIgniter.php(386): CodeIgniter\Filters\Filters->run('/', 'before')
+#1 E:\xampp\htdocs\lab\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 E:\xampp\htdocs\lab\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-28 23:29:55 --> Class 'Config\App\Filters\Auth' not found
+#0 E:\xampp\htdocs\lab\system\CodeIgniter.php(386): CodeIgniter\Filters\Filters->run('/', 'before')
+#1 E:\xampp\htdocs\lab\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 E:\xampp\htdocs\lab\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-28 23:30:41 --> Class 'Config\App\Filters\Auth' not found
+#0 E:\xampp\htdocs\lab\system\CodeIgniter.php(386): CodeIgniter\Filters\Filters->run('/', 'before')
+#1 E:\xampp\htdocs\lab\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 E:\xampp\htdocs\lab\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-28 23:30:43 --> Class 'Config\App\Filters\Auth' not found
+#0 E:\xampp\htdocs\lab\system\CodeIgniter.php(386): CodeIgniter\Filters\Filters->run('/', 'before')
+#1 E:\xampp\htdocs\lab\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 E:\xampp\htdocs\lab\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-28 23:30:56 --> Class 'Config\App\Filters\Auth' not found
+#0 E:\xampp\htdocs\lab\system\CodeIgniter.php(386): CodeIgniter\Filters\Filters->run('/', 'before')
+#1 E:\xampp\htdocs\lab\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 E:\xampp\htdocs\lab\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-28 23:33:11 --> Class 'CodeIgniter\Filters\Auth' not found
+#0 E:\xampp\htdocs\lab\system\CodeIgniter.php(386): CodeIgniter\Filters\Filters->run('/', 'before')
+#1 E:\xampp\htdocs\lab\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 E:\xampp\htdocs\lab\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-01-28 23:37:58 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in E:\xampp\htdocs\lab\app\Controllers\Login.php on line 41 and at least 3 expected
+#0 E:\xampp\htdocs\lab\app\Controllers\Login.php(41): Firebase\JWT\JWT::encode(Array, 'cskhfuwt48wbfjn...')
+#1 E:\xampp\htdocs\lab\system\CodeIgniter.php(825): App\Controllers\Login->index()
+#2 E:\xampp\htdocs\lab\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 E:\xampp\htdocs\lab\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\xampp\htdocs\lab\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-01-28 23:40:31 --> Illegal offset type in isset or empty
+#0 E:\xampp\htdocs\lab\vendor\firebase\php-jwt\src\JWT.php(206): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal offset ...', 'E:\\xampp\\htdocs...', 206, Array)
+#1 E:\xampp\htdocs\lab\vendor\firebase\php-jwt\src\JWT.php(185): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1Q...', 'cskhfuwt48wbfjn...', Array)
+#2 E:\xampp\htdocs\lab\app\Controllers\Login.php(41): Firebase\JWT\JWT::encode(Array, 'cskhfuwt48wbfjn...', Array)
+#3 E:\xampp\htdocs\lab\system\CodeIgniter.php(825): App\Controllers\Login->index()
+#4 E:\xampp\htdocs\lab\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#5 E:\xampp\htdocs\lab\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\lab\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-28 23:44:36 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in E:\xampp\htdocs\lab\app\Controllers\Login.php on line 48 and at least 3 expected
+#0 E:\xampp\htdocs\lab\app\Controllers\Login.php(48): Firebase\JWT\JWT::encode(Array, 'cskhfuwt48wbfjn...')
+#1 E:\xampp\htdocs\lab\system\CodeIgniter.php(825): App\Controllers\Login->index()
+#2 E:\xampp\htdocs\lab\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 E:\xampp\htdocs\lab\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\xampp\htdocs\lab\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
