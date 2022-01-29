@@ -5,6 +5,8 @@ namespace App\Controllers;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\API\ResponseTrait;
 use App\Models\FollowerModel;
+use App\Models\PageModel;
+use App\Models\UserModel;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 use Config\Services;
@@ -19,8 +21,13 @@ class Follow extends ResourceController
     use ResponseTrait;
     
     // follow a page
-    public function page($id)
+    public function page($id = 0)
     {
+        $pageModel = new PageModel();
+        $data = $pageModel->getWhere(['id' => $id])->getResult();
+        if( empty($data) ){
+            return $this->failNotFound('No Data Found with page id '.$id);
+        }
         $key = getenv('TOKEN_SECRET');
         $header = $this->request->getServer('HTTP_AUTHORIZATION');
         if(!$header) return $this->failUnauthorized('Token Required');
@@ -67,8 +74,13 @@ class Follow extends ResourceController
     }
  
     // follow a person
-    public function person($id)
+    public function person($id = 0)
     {
+        $userModel = new UserModel();
+        $data = $userModel->getWhere(['id' => $id])->getResult();
+        if( empty($data) ){
+            return $this->failNotFound('No Data Found with person id '.$id);
+        }
         $key = getenv('TOKEN_SECRET');
         $header = $this->request->getServer('HTTP_AUTHORIZATION');
         if(!$header) return $this->failUnauthorized('Token Required');

@@ -5,7 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\API\ResponseTrait;
 use App\Models\PostModel;
-use App\Models\UserModel;
+use App\Models\PageModel;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 use Config\Services;
@@ -41,6 +41,13 @@ class Post extends ResourceController
     // create a page
     public function create($id = 0)
     {
+        if( $id >0 ){
+            $pageModel = new PageModel();
+            $data = $pageModel->getWhere(['id' => $id])->getResult();
+            if( empty($data) ){
+                return $this->failNotFound('No Data Found with page id '.$id);
+            }
+        }
         helper(['form']);
         $rules = [
             'post_content' => 'required'

@@ -38,6 +38,7 @@ $routes->post('register', 'Register::index');
 $routes->post('login', 'Login::index');
 
 $routes->get('feed', 'Feed::posts', ['filter' => 'auth']);
+$routes->get('feed/(:num)', 'Feed::posts/$1', ['filter' => 'auth']);
 $routes->get('feed/(:num)/(:num)', 'Feed::posts/$1/$2', ['filter' => 'auth']);
 
 $routes->get('page', 'Page::index', ['filter' => 'auth']);
