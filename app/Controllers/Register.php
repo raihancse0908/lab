@@ -34,13 +34,13 @@ class Register extends ResourceController
         $model = new UserModel();
         $registered = $model->save($data);
         $response = [
-            'status'   => 201,
+            'status'   => 200,
             'error'    => null,
             'messages' => [
                 'success' => 'Data Saved'
             ]
         ];
-        $this->respondCreated($response);
+        return $this->respondCreated($response);
  
     }
  

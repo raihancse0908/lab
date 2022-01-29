@@ -57,7 +57,7 @@ class Follow extends ResourceController
         $model = new FollowerModel();
         $registered = $model->save($data);
         $response = [
-            'status'   => 201,
+            'status'   => 200,
             'error'    => null,
             'messages' => [
                 'success' => 'Followed Successfully'
@@ -105,7 +105,7 @@ class Follow extends ResourceController
         $model = new FollowerModel();
         $registered = $model->save($data);
         $response = [
-            'status'   => 201,
+            'status'   => 200,
             'error'    => null,
             'messages' => [
                 'success' => 'Followed Successfully'

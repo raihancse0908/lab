@@ -46,7 +46,15 @@ class Login extends ResourceController
         );
  
         $token = JWT::encode($payload, $key, 'HS256');
- 
-        return $this->respond($token);
+        
+        $response = [
+            'status'   => 200,
+            'error'    => null,
+            'messages' => [
+                'token' => $token
+            ]
+        ];
+        return $this->respondCreated($response);
+
     }
 }

@@ -23,7 +23,7 @@ class Post extends ResourceController
     {
         $model = new PostModel();
         $data = $model->findAll();
-        return $this->respond($data);
+        return $this->respond($data, 200);
  
     }
     // get single page
@@ -32,7 +32,7 @@ class Post extends ResourceController
         $model = new PostModel();
         $data = $model->getWhere(['id' => $id])->getResult();
         if($data){
-            return $this->respond($data);
+            return $this->respond($data, 200);
         }else{
             return $this->failNotFound('No Data Found with id '.$id);
         }
