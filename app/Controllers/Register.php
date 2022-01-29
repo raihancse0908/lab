@@ -33,11 +33,14 @@ class Register extends ResourceController
         ];
         $model = new UserModel();
         $registered = $model->save($data);
+        $user_id = $model->getInsertID();
+        $person = $model->getWhere(['id' => $user_id])->getResult();
         $response = [
             'status'   => 200,
             'error'    => null,
             'messages' => [
-                'success' => 'Data Saved'
+                'success' => 'Data Saved',
+                'person' => $person
             ]
         ];
         return $this->respondCreated($response);

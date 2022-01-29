@@ -51,7 +51,8 @@ class Login extends ResourceController
             'status'   => 200,
             'error'    => null,
             'messages' => [
-                'token' => $token
+                'token' => $token,
+                'user' => $user
             ]
         ];
         return $this->respondCreated($response);
