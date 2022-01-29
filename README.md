@@ -1,42 +1,42 @@
 ## Application Configuration
 
 Change Base URL >
-App/Config/App.php >
+`App/Config/App.php` >
 Line: 26
 
 ## Database Configuration
 
-App/Config/Database.php >
+`App/Config/Database.php` >
 Line: 35 to 38
 
 Migrate Database >
-From project run this command >
+Run this command from project root >
 `php spark migrate`
 
-Or import database from SQL file located in /database/lab.sql
+Or import database from SQL file located in `/database/lab.sql`
 
 ## Test API
 
 Add User 
-http://localhost/lab/public/register
+`http://localhost/lab/public/register`
 
 Login
-http://localhost/lab/public/login
+`http://localhost/lab/public/login`
 
 Post
-http://localhost/lab/public/post
+`http://localhost/lab/public/post`
 
 Page
-http://localhost/lab/public/page
+`http://localhost/lab/public/page`
 
 User Feed
-http://localhost/lab/public/feed
+`http://localhost/lab/public/feed`
 
 Follow Person
-http://localhost/lab/public/follow_person
+`http://localhost/lab/public/follow_person`
 
 Follow Page
-http://localhost/lab/public/follow_page
+`http://localhost/lab/public/follow_page`
 
 ## Server Requirements
 PHP version 7.3 or higher is required, with the following extensions installed:
