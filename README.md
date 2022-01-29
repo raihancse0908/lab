@@ -1,8 +1,8 @@
-## Server Requirements
-PHP version 7.3 or higher is required, with the following extensions installed:
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+## Application Configuration
+
+Change Base URL >
+App/Config/App.php >
+Line: 26
 
 ## Database Configuration
 
@@ -14,12 +14,6 @@ From project run this command >
 `php spark migrate`
 
 Or import database from SQL file located in /database/lab.sql
-
-## Application Configuration
-
-Change Base URL >
-App/Config/App.php >
-Line: 26
 
 ## Test API
 
@@ -43,3 +37,9 @@ http://localhost/lab/public/follow_person
 
 Follow Page
 http://localhost/lab/public/follow_page
+
+## Server Requirements
+PHP version 7.3 or higher is required, with the following extensions installed:
+- [intl](http://php.net/manual/en/intl.requirements.php)
+- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+- [mbstring](http://php.net/manual/en/mbstring.installation.php)
