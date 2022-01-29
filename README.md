@@ -20,13 +20,13 @@ Or import database from SQL file located in `/database/lab.sql`
 Add User 
 `http://localhost/lab/public/register`
 
-Login
+User Login
 `http://localhost/lab/public/login`
 
-Post
+Add Post
 `http://localhost/lab/public/post`
 
-Page
+Add Page
 `http://localhost/lab/public/page`
 
 User Feed
